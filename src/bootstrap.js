@@ -6,7 +6,7 @@ import { Router, Switch, Route } from "react-router-dom";
 
 import reducers from "./reducers";
 
-const createStoreWithMiddleware = applyMiddleware()(compose((window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)));
+const createStoreWithMiddleware = applyMiddleware()(compose((window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f)(createStore)));
 
 import "./style/main.scss";
 
