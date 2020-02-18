@@ -5,26 +5,26 @@ import { reduxForm, Field } from 'redux-form';
 import { FormInput, FormButton } from '../formFields';
 import Details from '../details';
 
-import history from '../../history';
+import History from '../../history';
 
 class SignUpForm extends Component {
     render () {
         const { className, handleSubmit } = this.props;
-        const links = [
+        const info = [
             {
                 _id: 0,
-                title: 'Not Registered? Create account here',
+                title: 'At least 6 characters',
                 onClick: () => history.push('/signup')
             },
             {
                 _id: 1,
-                title: 'Forgot account email?',
-                onClick: () => console.log('forgot email')
+                title: 'At least one number',
+                onClick: () => console.log('one number')
             },
             {
                 _id: 2,
-                title: 'Forgot password?',
-                onClick: () => console.log('forgot password')
+                title: 'At least one symbol',
+                onClick: () => console.log('one symbol')
             }
         ]
         return (
@@ -47,9 +47,9 @@ class SignUpForm extends Component {
                 placeholder='Password'
                 name='password' 
                 component={FormInput}/>
-                <Field className='sign-up-form__password' 
-                type='password'
-                title='Confirm Password' 
+                <Field className='sign-up-form__confirm' 
+                type='confirm'
+                title='Confirm' 
                 placeholder='Confirm Password'
                 name='confirm' 
                 component={FormInput}/>
@@ -62,7 +62,7 @@ class SignUpForm extends Component {
                 name='login' 
                 component={FormButton}/>
                 <Field className='sign-up-form__back' 
-                onClick={() => console.log('back')}
+                onClick={() => history.push('/signIn')}
                 type='button'
                 title='Back'
                 placeholder='Back'
@@ -70,7 +70,7 @@ class SignUpForm extends Component {
                 component={FormButton}
                 short={true}
                 />
-                <Details className = 'sign-up-form__details' title = 'QuickLinks' links={ links }/>
+                <Details className = 'sign-up-form__details' title = 'Password Requirements' info={info}/>
             </form>
         )
     }
@@ -82,3 +82,4 @@ SignUpForm = reduxForm({
 
 
 export default SignUpForm;
+
