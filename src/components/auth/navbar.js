@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import { connect } from 'react-redux';
 
@@ -10,7 +9,9 @@ class Navbar extends Component {
             {
                 this.props.navbarLinks.map((link, index) => {
                     return (
-                        <a className='navbar__link' onClick={() => console.log('trying to swith to active')} to key={index}>{link.title}</a>
+                        <a className={`navbar__link ${link.active ? 'green-text' : ''}`} key={index} onClick={() => console.log('trying to swith to active')}>
+                            {link.title}
+                        </a>
                     )
                 })
             }

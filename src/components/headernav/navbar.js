@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 
-class NavBar extends Component {
+import { connect } from "react-redux";
+
+class Navbar extends Component {
     render () {
         return (
             <div className='navbar'>
+            {
+                this.props.navbarLinks.map((link, index) => {
+                    return (
+                        <a className={`navbar__link ${link.active ? 'green-text' : ''}`} key={index} onClick={() => console.log('trying to swith to active')}>
+                            {link.title}
+                        </a>
+                    )
+                })
+            }
             
             </div>
 
@@ -11,4 +22,13 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+function mapStateToProps(state) {
+    const{ navbarLinks } = state.headerNavbar;
+    return {
+        navbarLinks
+    }
+}
+
+Navbar = connect(mapStateToProps)(Navbar);
+
+export default Navbar;
