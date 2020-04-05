@@ -29,10 +29,15 @@ body {
     justify-items: center;
 }
 
-@import './layout.scss';
-@import './headernavbar.scss';
-@import './auth/signin.scss';
-@import './auth/signup.scss';
-@import './page-title.scss';
-@import './form-fields.scss';
-@import './details.scss';
+@import 'layout';
+@import 'headernavbar';
+
+@import 'auth/signin';
+@import 'auth/signup';
+@import 'page-title';
+@import 'form-fields';
+@import 'details';
+
+@import 'account/account';
+@import 'account/account-information';
+@import 'account/purchase-history';
