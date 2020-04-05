@@ -5,7 +5,7 @@ import { reduxForm, Field } from 'redux-form';
 import { FormInput, FormButton } from '../formFields';
 import Details from '../details';
 
-import History from '../../history';
+import history from '../../history';
 
 class SignUpForm extends Component {
     render () {
@@ -55,9 +55,9 @@ class SignUpForm extends Component {
                 component={FormInput}/>
                 <div className='sign-up-form__line'></div>
                 <Field className='sign-up-form__login' 
-                onClick={() => console.log('tryna submit')}
+                onClick={() => history.push('/account')}
                 type='submit'
-                title='Login'
+                title='Create Account'
                 placeholder='Login'
                 name='login' 
                 component={FormButton}/>

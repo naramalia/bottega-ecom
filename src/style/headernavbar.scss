@@ -17,9 +17,10 @@
     &__links {
         grid-column: links-s/links-e;
         grid-row: 1/-1;
+
         display: grid;
         grid-template-rows: [s] 1fr [e];
-        grid-column-gap: 40px;
+        grid-column-gap: 47px;
     
         color: #333;
         font-size: 16px;
@@ -54,7 +55,21 @@
     font-size: 18px;
     font-weight: normal;
 
-    & > * {
-        grid-row: s/e;
+    // fix
+    &__links {
+        grid-column: 2fr;
+        grid-row: 1/-1;
+
+        display: grid;
+        grid-template-rows: [s] 1fr [e];
+        grid-column-gap: 47px;
+    
+        color: white;
+        font-size: 16px;
+    
+
+        & > * {
+            grid-row: s/e;
+        }
     }
 }
