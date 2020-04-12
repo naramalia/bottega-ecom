@@ -38,7 +38,7 @@
     &__zipcode {
         grid-row: zipcode-s/zipcode-e;
         justify-self: end;
-        // transform: translateX (226px);
+        // transform: translateX(226px);
     }
 
     &__state,
@@ -48,4 +48,8 @@
         width: 200px;
         }
     }  
+
+    &__change-password {
+        transform: translateY(38px);
+    }
 }
