@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { reduxForm, Field } from 'redux-form';
 
-import { FormInput, LongGrayButton } from '../formFields';
+import { FormInput, FormButton, LongGrayButton } from '../formFields';
 
 import history from '../../history';
 
@@ -58,8 +58,8 @@ class AccountInformationForm extends Component {
                 title='Zipcode' 
                 placeholder='Zipcode'
                 name='zipcode' 
-                component={FormInput}/>
-               
+                component={FormInput}/>,
+                <div className='account-information-form__line'></div>
                 {
                     this.state.showPasswords? 
                     [
@@ -75,12 +75,28 @@ class AccountInformationForm extends Component {
                         title='New Password'
                         name='new' 
                         component={FormInput}/>,
-                        <Field key={3} className='account-information-form__confirm'
+                        <Field key={2} className='account-information-form__confirm'
                         type='password'
                         labelTitle='Confirm Password'
                         title='Confirm Password'
                         name='confirm' 
-                        component={FormInput}/>
+                        component={FormInput}/>,
+                        <Field key={4} className='account-information-form__update-information' 
+                        onClick={() => this.setState({ showPasswords:false })}
+                        type='submit'
+                        title='Update Information'
+                        placeholder='Update Information'
+                        name='update-information' 
+                        component={FormButton}/>,
+                        <Field key={5} className='account-information-form__cancel' 
+                        onClick={() => this.setState({ showPasswords:false })}
+                        type='button'
+                        title='Cancel'
+                        placeholder='Cancel'
+                        name='cancel' 
+                        component={FormButton}
+                        short={true}
+                        />
                     ]
                     :
                         <Field className='account-information-form__change-password'
