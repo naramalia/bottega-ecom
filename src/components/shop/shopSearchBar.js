@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 
+
 function FormSearchBar(props) {
     return (
         <div className='search-bar-grid'>
