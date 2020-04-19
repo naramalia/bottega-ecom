@@ -5,7 +5,7 @@ class Quantity extends Component {
         const { className, quantity} = this.props;
         return (
             <div className={`${className} quantity`}>
-                <div className='quanty__count'>
+                <div className='quantity__count'>
                     {quantity}
                 </div>
                 <div className='quantity_plus'>
@@ -20,3 +20,4 @@ class Quantity extends Component {
 }
 
 export default Quantity;
+
