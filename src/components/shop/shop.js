@@ -47,9 +47,10 @@ class Shop extends Component {
                         })
                     }
                 </div>
+                {/* create onClick to use this component 
                 <div className='shop-cart'>
                     <ShopCart />
-                </div>
+                </div> */}
             </div>
         ) 
     }
