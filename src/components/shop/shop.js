@@ -46,7 +46,9 @@ class Shop extends Component {
                         })
                     }
                 </div>
-                {/* shop cart button */}
+                {/* <div className='shop-cart'>
+                    <ShopCart />
+                </div> */}
             </div>
         ) 
     }
