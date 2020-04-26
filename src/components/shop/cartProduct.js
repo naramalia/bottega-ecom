@@ -7,7 +7,7 @@ class CartProduct extends Component {
         const { className, title, quantity, price } = this.props;
         return (
             <div className={`{className} cart-product`}>
-                <img clasName='cart-product__image' src='http://via.placeholder.com/130x130' />
+                <img className='cart-product__image' src='http://via.placeholder.com/130x130' />
                 <div className='cart-product__title'>{title}</div>
                 <Quantity className='cart-product__quantity' quantity={quantity}/>
                 <a className='cart-product__remove'>Remove</a>
