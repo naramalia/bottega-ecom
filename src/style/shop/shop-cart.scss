@@ -63,7 +63,7 @@
         grid-column: s/e;
         display: grid;
         overflow-y: scroll;
-
+        grid-row-gap: 35px;
     }
 
     &__footer {
