@@ -10,7 +10,7 @@
     &__form {
         display: grid;
         grid-template-rows: [name-s] 64px [name-e email-s] 64px [email-e space-s] 35px [space-e password-s] 64px [password-e confirm-s] 64px [confirm-e] minmax(20px, 81px) [line-s] 26px [line-e buttons-s] 38px [buttons-e];
-        grid-template-columns: 137px [space-s] 40px [space-e create-s] 1fr [create-e back -s] 1fr [back-e];
+        grid-template-columns: 137px [space-s] 40px [space-e create-s] 1fr [create-e back-s] 1fr [back-e];
         grid-row-gap: 15px;
     }
 }
