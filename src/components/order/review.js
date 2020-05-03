@@ -20,7 +20,7 @@ class Review extends Component {
     render () {
         let subtotal=0;
         this.props.cartProducts.map(cartProduct => {
-            subtotal += cartProduct.quantity * cartProducts.product.price;
+            subtotal += cartProduct.quantity * cartProduct.product.price;
         })
         return (
             <div className='review'>
@@ -33,9 +33,7 @@ class Review extends Component {
 
 function mapStateToProps(state) {
     const { cartProducts } = state.user;
-    return (
-        state
-    )
+    return { cartProducts }
 }
 
 Review = connect(mapStateToProps, actions)(Review);
