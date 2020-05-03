@@ -5,6 +5,12 @@
         grid-row: products-s/products-e;
         overflow-y: scroll;
 
+        display: grid;
+        grid-template-rows: repeat(auto-fit, 80px);
+        grid-row-gap: 12px;
+
+        align-self: center;
+
     }
     &__line {
         grid-column: 1/-1;
@@ -12,6 +18,7 @@
         border-top: 1px solid #ccc;
         margin-top: 24px;
     } 
+    
     &__back {
         grid-row: buttons-s/buttons-e;
         grid-column: back-s/back-e;
@@ -19,5 +26,6 @@
     &__proceed {
         grid-row: buttons-s/buttons-e;
         grid-column: proceed-s/proceed/e;
+        padding-left: 40px;
     }
 }
